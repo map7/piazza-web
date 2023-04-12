@@ -7,4 +7,12 @@ class User < ApplicationRecord
     format: {with: URI::MailTo::EMAIL_REGEXP},
     uniqueness: {case_sensitive: false}
 
+  before_validation :strip_extraneous_spaces
+
+  private
+
+  def strip_extraneous_spaces
+    self.name = self.name&.strip # The & is like a 'try' command which stops errors on nil object
+    self.email = self.email&.strip
+  end
 end

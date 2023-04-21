@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      #@organisation = Organisation.create(members: [@user])
+      @organisation = Organisation.create(members: [@user])
       # TODO: Log in user
 
       redirect_to root_path,

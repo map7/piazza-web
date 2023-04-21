@@ -5,8 +5,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     get sign_up_path
     assert_response :ok
 
-    # assert_difference ["User.count", "Organisation.count"], 1 do
-    assert_difference ["User.count"], 1 do
+    assert_difference ["User.count", "Organisation.count"], 1 do
       post sign_up_path, params: {
         user: {
           name: "John",
@@ -27,8 +26,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     get sign_up_path
     assert_response :ok
 
-    # assert_no_difference ["User.count", "Organisation.count"] do
-    assert_no_difference ["User.count"] do
+    assert_no_difference ["User.count", "Organisation.count"] do
       post sign_up_path, params: {
         user: {
           name: "John",

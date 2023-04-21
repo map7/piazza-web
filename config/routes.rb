@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'feed/show'
-  get 'users/new'
-  get 'users/create'
+  root 'feed#show'
+
+  get "sign_up", to: 'users#new'
+  post "sign_up", to: 'users#create'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

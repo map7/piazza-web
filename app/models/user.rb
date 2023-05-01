@@ -14,6 +14,8 @@ class User < ApplicationRecord
     presence: true,
     length: {minimum: 8}
 
+  has_many :app_sessions
+
   private
 
   def strip_extraneous_spaces

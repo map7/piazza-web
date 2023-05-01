@@ -1,1 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+jerry:
+  user: jerry
+  organisation: jerry
+
+kramer:
+  user: kramer
+  organisation: kramer
+
+elaine:
+  user: elaine
+  organisation: elaine
+
+george:
+  user: george
+  organisation: george

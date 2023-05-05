@@ -43,7 +43,7 @@ module Authenticate
     Current.user = Current.app_session&.user
   end
 
-  def authenicate_using_cookie
+  def authenticate_using_cookie
     app_session = cookies.encrypted[:app_session]
     authenticate_using app_session&.with_indifferent_access
   end
